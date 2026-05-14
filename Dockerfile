@@ -118,8 +118,8 @@ RUN export SHELL=/bin/bash  && export NVM_DIR="$HOME/.nvm" \
   && nvm alias default lts/* \
   && npm install -g pnpm \
   && pnpm setup \
-  && export PNPM_HOME="/home/openclaw/.local/share/pnpm" \
-  && export PATH="$PNPM_HOME:$PATH" \
+ && export PNPM_HOME="/home/openclaw/.local/share/pnpm" \
+ && export PATH="$PNPM_HOME/bin:$PATH" \
   && pnpm add -g "openclaw@${OPENCLAW_VERSION}"
 
 # Switch back to root for final setup
