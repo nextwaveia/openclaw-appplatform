@@ -120,6 +120,7 @@ RUN export SHELL=/bin/bash  && export NVM_DIR="$HOME/.nvm" \
   && pnpm setup \
  && export PNPM_HOME="/home/openclaw/.local/share/pnpm" \
  && export PATH="$PNPM_HOME/bin:$PATH" \
+  && printf 'block-exotic-subdeps=false\n' >> /home/openclaw/.npmrc \
   && pnpm add -g "openclaw@${OPENCLAW_VERSION}"
 
 # Switch back to root for final setup
